@@ -1,0 +1,57 @@
+<!-- TODO Add following HTML Constraints on following fields
+      1. Make first name input field read only
+      2. Make nickName disabled
+      3. make pin field as a number field, this validation should be done in validate() function
+          use HTMLElement's validatity propery and validity properties rangeOverFlow and underflow
+      4. call validate() function when button(CheckPin) is clicked
+      5. Make sure that form is not submitted when validation fails-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<script type="text/javascript">
+
+
+    function validate(){
+	var ele =document.getElementById("error");
+	var v1=document.getElementById("fname");
+    v1.setAttribute('readonly','true');
+	var v2=document.getElementById("nname");
+    v2.setAttribute('disabled','true');
+	
+	var pincode =document.getElementById("pin").value;
+	if(pincode.validity.rangeOverflow){
+         ele.innerHTML = 'Number exceeds the range';
+      }
+	  else if(pincode.validity.rangeUnderflow){
+         ele.innerHTML = 'Number is lower than the range ';
+      }
+	  ele.innerHTML='data';
+	
+	
+
+       //display error message as innerHTML of <p> with id =error
+    }
+</script>
+	
+</head>
+<body>
+<form id="form1" action="#">
+    <form action="">
+        First name:<br>
+        <input id="fname" type="text" name="firstname" value="Vivek" >
+        <input  id="nname" type="text" name="nickName" value="Vivek" >
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" size="40" maxlength="5">
+       Pin  <input id="pin" type="text" name="pin1"  type="number" min="100000" max="999999" >
+        <p id="error"></p>
+        <button onclick="validate();" >CheckPin</button>
+        <input type="submit" >
+        <input id="1" type="submit" formaction="http://www.cnn.com" formmethod="post">
+    </form>
+</form>
+
+</body>
+</html>

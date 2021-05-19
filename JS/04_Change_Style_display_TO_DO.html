@@ -1,0 +1,36 @@
+<!-- TODO turn display off for the content of <p> element and make button look gray with text "Show!"-->
+<!-- TODO turn display on for the content of <p> element when btn pressed again and make button look beige with text "Hide!" -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+    #demo{
+        background-color: #ffe5e5;
+    }
+    </style>
+</head>
+<body>
+<h1>What Can JavaScript Do?</h1>
+<p id="demo">JavaScript can hide HTML elements.</p>
+<button type="button" onclick="hideAndSeek(this)">Hide!</button>
+<script type="text/javascript">
+
+    function hideAndSeek(btn){
+	var ele=document.getElementById('demo');
+	
+        if(ele.style.display=='none') {
+            ele.style.display = "block";
+            btn.innerHTML = "Hide!";
+			btn.style.backgroundColor="beige";
+        }else{
+           
+             ele.style.display="none";
+			  btn.innerHTML="Show!";
+			  btn.style.backgroundColor="grey";
+        }
+
+
+    }
+</script>
+</body>
+</html>

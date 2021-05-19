@@ -1,0 +1,35 @@
+<!-- TODO I: Toggle the content of <p> element-->
+ <!--TODO I: Toggle the Text of button element-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function headtext()
+{
+	 var txt=document.getElementById('demo')
+	 if(txt.innerHTML== 'This is OLD Content')
+	 {txt.innerHTML='<h2>Hello!! This is New Content</h2>';}
+	 
+	 else{txt.innerHTML='This is OLD Content';}
+}
+function btntext()
+{
+	 var bt=document.getElementById('btn')
+	 if(bt.innerHTML== 'ChangeIt')
+	 {bt.innerHTML='changed';}
+	 
+	 else{bt.innerHTML='ChangeIt';}
+}
+</script>
+  <h1>Java SCript Can chnage HTML Content</h1>
+  <p id="demo">This is OLD Content</p>
+  <button id="btn" onclick="btntext();headtext()">ChangeIt</button>
+</body>
+</html>
+
+

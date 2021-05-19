@@ -1,0 +1,24 @@
+<!--TODO #1 include/import js file 05_external_java_script_TO_DO.js -->
+<!-- TODO #2 call hideAndSeekContent(this,'show',document.getElementById('demo'),false) for show-->
+<!-- TODO #3 call hideAndSeekContent just like ToDO #2 for hide button with flag being set to true-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button#show{
+            display:none;
+        }
+    </style>
+    <script src="05_external_java_script_TO_DO.js"></script>
+</head>
+<body>
+<p id="demo">Hello World </p>
+<button id='hide' onclick="hideAndSeekContent(this,'show',document.getElementById('demo'),true)">Hide</button>
+<button id='show' onclick="hideAndSeekContent(this,'hide',document.getElementById('demo'),false)" >Show</button>
+<!--<button id='show' onclick="hideAndSeekContent(this,'hide',document.getElementById('demo'),false)">Show</button>-->
+
+
+</body>
+</html>

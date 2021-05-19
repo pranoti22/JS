@@ -1,0 +1,28 @@
+<!-- TODO#1 change the image from buld_off.jpeg to buld_on.png -->
+<!-- TODO#2 change the Button text  from Switch_ON to  Switch_OFF and back -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="/Users/HP/Desktop/perennial/p.jpg">
+<button id="btn" onclick="change(this)">Switch_ON</button>
+<script type="text/javascript">
+
+    function change(btn){
+        var elem = document.getElementsByTagName("img")[0];
+        if(btn.innerHTML.indexOf("ON") !=-1) {
+            elem.setAttribute("src", "/Users/HP/Desktop/perennial/n.jpg");
+            btn.innerHTML = "SWITCH_OFF";
+        }else{
+             btn.innerHTML="SWITCH_ON";
+             elem.src="/Users/HP/Desktop/perennial/p.jpg";
+        }
+
+    }
+
+</script>
+</body>
+</html>

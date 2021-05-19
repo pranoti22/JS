@@ -1,0 +1,27 @@
+<!-- TODO write a function and change the style to change the font of text in <p> to 35x. -->
+<!--TODO change the button text to "IncreaseFont" and "DecreaseFont" -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>What Can JavaScript Do?</h1>
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+<button type="button" onclick="changeFont(this)">IncreaseFont</button>
+<script type="text/javascript">
+
+    function changeFont(btn){
+	var ele=document.getElementById('demo');
+	
+        if(btn.innerHTML.indexOf("IncreaseFont")!= -1) {
+            ele.style.fontSize = "35px";
+            btn.innerHTML = "DecreaseFont";
+        }else{
+             btn.innerHTML="IncreaseFont";
+             ele.style.fontSize="20px";
+        }
+
+
+    }
+</script>
+</body>
+</html>
